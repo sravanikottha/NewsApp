@@ -2,7 +2,7 @@ public with sharing class newsController {
     @AuraEnabled
     public static Map<String, Object> retriveNews(){
         HttpRequest httpRequest = new HttpRequest();
-        httpRequest.setEndpoint('https://newsapi.org/v2/everything?q=tesla&from=2021-11-06&sortBy=publishedAt&apiKey=7b8639a7ecea46e2b5946dfaed19803c');
+        httpRequest.setEndpoint('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=7b8639a7ecea46e2b5946dfaed19803c');
         httpRequest.setMethod('GET');
 
         Map<String, Object> newsJsonData = new Map<String, Object>();
